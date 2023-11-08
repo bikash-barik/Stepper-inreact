@@ -33,11 +33,12 @@ function EmailSand() {
   };
 
   const data = [
-    "Racing car sprays burning fuel into crowd.",
-    "Japanese princess to wed commoner.",
-    "Australian walks 100km after outback crash.",
-    "Man charged over missing wedding girl.",
-    "Los Angeles battles huge wildfires.",
+    "  1. example@example.com",
+    "  1. example@example.com",
+    "  1. example@example.com",
+    "  1. example@example.com",
+    "  1. example@example.com",
+    "  1. example@example.com",
   ];
 
   const handleSubmit = async (event) => {
@@ -203,6 +204,7 @@ function EmailSand() {
             </h4>
 
             <List
+            className="p-3"
               header={<div>Email</div>}
               bordered
               style={{ marginTop: "2rem", color: "black", fontSize: "2rem" }}
@@ -239,7 +241,7 @@ function EmailSand() {
         </div>
 
         <Row justify={"center"}>
-          <Col xs={24} sm={24} md={10} lg={10} xl={20}>
+          <Col xs={24} sm={24} md={10} lg={11} xl={24}>
             <table class="table table-hover">
               <thead>
                 <tr>
@@ -247,6 +249,10 @@ function EmailSand() {
                   <th scope="col">Domain</th>
                   <th scope="col">Emails</th>
                   <th scope="col">Status</th>
+                  <th scope="col">Opening Email</th>
+                  <th scope="col">Send Email</th>
+                  <th scope="col">Bounced Email</th>
+                  <th scope="col">Email Failed</th>
                 </tr>
               </thead>
               <tbody>
@@ -259,6 +265,26 @@ function EmailSand() {
                   <td>
                     <button type="button" class="btn btn-success">
                       Sand successfully
+                    </button>
+                  </td>
+                  <td>
+                    <button type="button" class="btn btn-warning">
+                      Open
+                    </button>
+                  </td>
+                  <td>
+                    <button type="button" class="btn btn-success">
+                    Sand
+                    </button>
+                  </td>
+                  <td>
+                    <button type="button" class="btn btn-danger">
+                     Bounced
+                    </button>
+                  </td>
+                  <td>
+                    <button type="button" class="btn btn-danger">
+                    Failed
                     </button>
                   </td>
                 </tr>
